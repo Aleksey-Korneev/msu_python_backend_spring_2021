@@ -92,7 +92,7 @@ class TicTacToe:
         return True
 
     def start_game(self):
-        while(True):
+        while True:
             self._show_board()
 
             x, y = self._input_move()
