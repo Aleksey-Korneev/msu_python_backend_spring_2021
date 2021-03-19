@@ -9,12 +9,22 @@ class MyList(list):
                            fillvalue=0)
         )
 
+    __radd__ = __add__
+
     def __sub__(self, other):
         return MyList(
             x - y for x, y
             in zip_longest(self, other,
                            fillvalue=0)
         )
+
+    def __neg__(self):
+        return MyList(
+            -x for x in self
+        )
+
+    def __rsub__(self, other):
+        return -self.__sub__(other)
 
     def __lt__(self, other):
         return sum(self) < sum(other)
