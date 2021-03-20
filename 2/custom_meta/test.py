@@ -26,9 +26,6 @@ class FieldsNameTest(unittest.TestCase):
 
 
 class MethodsNameTest(unittest.TestCase):
-    def setUp(self):
-        self.instance = TestClass()
-
     def test_correct(self):
         self.assertTrue(
             hasattr(TestClass, 'custom_method')
@@ -55,9 +52,6 @@ class ClassNameTest(unittest.TestCase):
 
 
 class MagicMethodsNameTest(unittest.TestCase):
-    def setUp(self):
-        self.instance = TestClass()
-
     def test_correct(self):
         self.assertTrue(
             hasattr(TestClass, '__init__')
