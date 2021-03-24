@@ -24,7 +24,7 @@ class MyList(list):
         )
 
     def __rsub__(self, other):
-        return -self.__sub__(other)
+        return -(self - other)
 
     def __lt__(self, other):
         return sum(self) < sum(other)
